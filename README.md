@@ -40,7 +40,7 @@ Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual A
 The detailed scripts used to train PLMDA-PPI is in [main_inter.py](https://github.com/ChengfeiYan/PLMGraph-Inter/blob/main/train.py), which contains all the details of training PLMDA-PPI, including how to choose the best model, how to calculate the loss, etc.
     
 ## The output of exmaple(7VD7)
-![image](https://github.com/ChengfeiYan/PLMGraph-Inter/blob/main/data/plmg.jpg)
+![image]()
 
 ## Reference  
 Please cite: Shuchen Deng, Chengfei Yan. Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual Attention on Protein Language Models.
