@@ -124,7 +124,7 @@ class MainModel(pl.LightningModule):
 		
 
 	def validation_step(self, batch, batch_idx):
-		input,[label,contact_map,interaction] = batch
+		input = batch
 		pred_map,pred_inter = self(input)
 
 		contact_map = contact_map.to(pred_map)
