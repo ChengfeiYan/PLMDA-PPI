@@ -6,7 +6,6 @@ import torch,torch.nn
 from model.graph_module import GraphModule
 from model.contact_module import ContactModule
 from model.interaction_module import InteractionModule
-from model.graph_sub_module import GraphSubModule
 
 import metrics
 import lightning.pytorch as pl
