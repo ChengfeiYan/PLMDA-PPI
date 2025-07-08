@@ -41,5 +41,5 @@ The detailed script used to train PLMDA-PPI is in [main_inter.py]([https://githu
 
 ## Reference  
 Please cite:  Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual Attention on Protein Language Models
-Shuchen Deng, Xuanjun Wan, Zichun Mu, Sheng-You Huang, Chengfei Yan
+Shuchen Deng, Xuanjun Wan, Zichun Mu, Sheng-You Huang*, Chengfei Yan*
 bioRxiv 2025.07.04.663157; doi: https://doi.org/10.1101/2025.07.04.663157
