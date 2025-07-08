@@ -31,7 +31,7 @@ Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual A
     7.  result_path: [a directory for the output]
     8.  model_path: PLMDA-PPI(PDB) or PLMDA-PPI(Transfer)
     8.  device: cpu, cuda:0, cuda:1, ...
-   Where MSA should be derived from the Uniref100 database. If you encounter that some residues in the pdb file are missing, you can use [MODELLER](https://salilab.org/modeller/tutorial/iterative.html) to fill in these missing residues.
+   If you encounter that some residues in the pdb file are missing, you can use [MODELLER](https://salilab.org/modeller/tutorial/iterative.html) to fill in these missing residues.
 
 ## Example
     python predict.py ./example/1Z6O_C.fasta ./example/1Z6O_C.msa.fasta ./example/1Z6O_C.pdb ./example/1Z6O_O.fasta ./example/1Z6O_O_msa.fasta ./example/1Z6O_O.pdb ./example/result PLMDA-PPI(PDB).pt cpu
