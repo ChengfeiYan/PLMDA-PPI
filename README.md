@@ -34,7 +34,7 @@ Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual A
    If you encounter that some residues in the pdb file are missing, you can use [MODELLER](https://salilab.org/modeller/tutorial/iterative.html) to fill in these missing residues.
 
 ## Example
-    python predict.py ./example/1Z6O_C.fasta ./example/1Z6O_C.msa.fasta ./example/1Z6O_C.pdb ./example/1Z6O_O.fasta ./example/1Z6O_O_msa.fasta ./example/1Z6O_O.pdb ./example/result PLMDA-PPI(PDB).pt cpu
+    python predict.py ./example/1Z6O_C.fasta ./example/1Z6O_C.msa.a3m ./example/1Z6O_C.pdb ./example/1Z6O_O.fasta ./example/1Z6O_O_msa.a3m ./example/1Z6O_O.pdb ./example/result PLMDA-PPI(PDB).pt cpu
 
 ## Train
 The detailed script used to train PLMDA-PPI is in [main_inter.py]([https://github.com/ChengfeiYan/PLMDA-PPI/blob/main/model/main_inter.py]), which contains all the details of training PLMDA-PPI, including how to choose the best model, how to calculate the loss, etc.
