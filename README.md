@@ -57,7 +57,7 @@ For batch-run inference:
     {protein_pair},{len1},{len2},{fasA},{a3mA},{pdbA},{fasB},{a3mB},{pdbB},{interaction},{contact}
     1. contact: txt file of true protein pair contact map.
     e.g.
-    1Z6O_C:1Z6O_O,212,191,1Z6O_C.fasta,1Z6O_C.msa.a3m,1Z6O_C.pdb,1Z6O_O.fasta,1Z6O_O_msa.a3m,1Z6O_O.pdb,1,1Z6O_C:1Z6O_O.contact
+    1Z6O_C:1Z6O_O,212,191,1Z6O_C.fasta,1Z6O_C.msa.a3m,1Z6O_C.pdb,1Z6O_O.fasta,1Z6O_O_msa.a3m,1Z6O_O.pdb,1,1Z6O_C_O.contact
 The example train [csv file](https://github.com/ChengfeiYan/PLMDA-PPI/blob/main/example/example_train.csv) is listed in the example directory.
 
 ## Reference  
