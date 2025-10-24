@@ -125,7 +125,7 @@ class PPIDataset(Dataset):
 
     def __getitem__(self, index):
         protein_pair = str(ppi_df.loc[index][0])
-        fasA, a3mA, pdbA, fasB, a3mB, pdbB = ppi_df.loc[index][3:-2]
+        fasA, a3mA, pdbA, fasB, a3mB, pdbB = ppi_df.loc[index][1:]
         save_dir = os.path.join(result_path,protein_pair)
         os.makedirs(save_dir,exist_ok=True)
         nodes1, edges1, edge_index1, nodes2, edges2, edge_index2, seq1, seq2 = get_mono_feature(fasA, a3mA, pdbA, fasB, a3mB, pdbB, save_dir, self.device)
