@@ -21,6 +21,8 @@ Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual A
    Download the trained models from  [trained models](https://drive.google.com/file/d/1prd9KKoM_BAJuzeZm4DWkiUQur-1mdCA/view?usp=sharing).
 
 ## Usage
+For pair inference:
+
     python predict.py sequenceA msaA pdbA sequenceB msaB pdbB result_path model_path device
     1.  sequenceA: fasta file corresponding to target A.
     2.  msaA: a3m file corresponding to target A (multiple sequence alignment).
@@ -30,14 +32,33 @@ Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual A
     6.  pdbB: pdb file corresponding to target B.
     7.  result_path: [a directory for the output]
     8.  model_path: PLMDA-PPI(PDB) or PLMDA-PPI(Transfer)
-    8.  device: cpu, cuda:0, cuda:1, ...
+    9.  device: cpu, cuda:0, cuda:1, ...
    If you encounter that some residues in the pdb file are missing, you can use [MODELLER](https://salilab.org/modeller/tutorial/iterative.html) to fill in these missing residues.
 
-## Example
+#### Example
     python predict.py 1Z6O_C.fasta 1Z6O_C.msa.a3m 1Z6O_C.pdb 1Z6O_O.fasta 1Z6O_O_msa.a3m 1Z6O_O.pdb result PLMDA-PPI(PDB).pt cpu
+
+For batch-run inference:
+
+    python predict_list.py ppi_list.csv result_path model_path device
+    Where ppi_list.csv is a csv file of:
+    {protein_pair},{fasA},{a3mA},{pdbA},{fasB},{a3mB},{pdbB}
+    e.g.
+    1Z6O_C:1Z6O_O,1Z6O_C.fasta,1Z6O_C.msa.a3m,1Z6O_C.pdb,1Z6O_O.fasta,1Z6O_O_msa.a3m,1Z6O_O.pdb
+The example test [csv file](https://github.com/ChengfeiYan/PLMDA-PPI/blob/main/example/example_test.csv) is listed in the example directory.
 
 ## Train
 The detailed script used to train PLMDA-PPI is in [main_inter.py](https://github.com/ChengfeiYan/PLMDA-PPI/blob/main/model/main_inter.py), which contains all the details of training PLMDA-PPI, including how to choose the best model, how to calculate the loss, etc.
+
+For batch-run inference:
+
+    python train.py ppi_list.csv result_path device
+    Where ppi_list.csv is a csv file of:
+    {protein_pair},{len1},{len2},{fasA},{a3mA},{pdbA},{fasB},{a3mB},{pdbB},{interaction},{contact}
+    1. contact: txt file of true protein pair contact map.
+    e.g.
+    1Z6O_C:1Z6O_O,212,191,1Z6O_C.fasta,1Z6O_C.msa.a3m,1Z6O_C.pdb,1Z6O_O.fasta,1Z6O_O_msa.a3m,1Z6O_O.pdb,1,1Z6O_C:1Z6O_O.contact
+The example train [csv file](https://github.com/ChengfeiYan/PLMDA-PPI/blob/main/example/example_train.csv) is listed in the example directory.
 
 ## Reference  
 Please cite:  Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual Attention on Protein Language Models
