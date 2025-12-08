@@ -61,6 +61,6 @@ For batch-run inference:
 The example train [csv file](https://github.com/ChengfeiYan/PLMDA-PPI/blob/main/example/example_train.csv) is listed in the example directory.
 
 ## Reference  
-Please cite:  Mechanism-Aware Protein-Protein Interaction Prediction via Contact-Guided Dual Attention on Protein Language Models
+Please cite:  Mechanism-Aware Inductive Bias Enhances Generalization in Protein-Protein Interaction Prediction
 Shuchen Deng, Xuanjun Wan, Zichun Mu, Sheng-You Huang*, Chengfei Yan*
 bioRxiv 2025.07.04.663157; doi: https://doi.org/10.1101/2025.07.04.663157
