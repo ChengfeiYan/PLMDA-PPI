@@ -86,7 +86,7 @@ The `data/` directory contains the PPI datasets and prediction scores used for m
 | `data/*_model/PDB_result/` | Results from both model variants on the PDB validation set and newly deposited PDB test set | PDB benchmark and time-split evaluation |
 | `data/sampled_test/` | Per-species subsets and scores from structure-prediction baselines | Comparison with AF2Complex, RF2-Lite, and RF2-PPI |
 
-Training and test index files generally use the columns `protein1,protein2,interaction`. Result files use `pair` as the first column, followed by prediction scores from the evaluated methods. Under `HINT_result`, `full`, `cluster_40`, `cluster_30`, and `cluster_20` denote the full test set and increasingly stringent homology-reduced sets retaining proteins with no more than 40%, 30%, and 20% sequence identity to training proteins, respectively.
+Training and test index files generally use the columns `protein1,protein2,interaction`. Result files use `pair` as the first column, followed by prediction scores from the evaluated methods. Under `HINT_result`, `full`, `cluster_40`, `cluster_30`,  `cluster_20`,  and `cluster_10` denote the full test set and increasingly stringent homology-reduced sets retaining proteins with no more than 40%, 30%, 20% and 10% sequence identity to training proteins, respectively.
 
 ## Reference  
 Please cite:  Mechanism-Aware Inductive Bias Enhances Generalization in Protein-Protein Interaction Prediction
